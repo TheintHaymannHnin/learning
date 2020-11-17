@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Landing Page</title>
+    <!-- CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+<!-- font-awsome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+<style>
+        aside {
+	width:219px;
+	float:left;
+	margin-right:30px;
+	padding:5px 0 0 0;
+  color:black;
+}
+.categories {
+	padding-bottom:37px;
+}
+
+
+/* Category CSS */
+.category {
+    position: relative;
+    padding: 0 30px;
+    margin-bottom: 30px;
+}
+
+.category .col-md-3 {
+    padding: 0;
+}
+
+.category .category-item {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 100%;
+    max-height: 400px;
+    overflow: hidden;
+    background: #ffffff;
+}
+
+.category .category-item.ch-400 {
+    height: 400px;
+}
+
+.category .category-item.ch-250 {
+    height: 250px;
+}
+
+.category .category-item.ch-150 {
+    height: 150px;
+}
+
+.category .category-item img {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+   
+}
+.category .category-name {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    background: rgba(13, 138, 211, 0.7);
+    transition: all 0.3s;
+    opacity: 0;
+}
+
+.category .category-name:hover {
+    opacity: 1;     
+}
+
+.category .category-name p {
+    margin: 0 0 50px 0;
+    padding: 15px;
+    width: 100%;
+    text-align: center;
+    color: #ffffff;
+    font-size: 16px;
+    transition: all 0.3s;
+}
+
+.category .category-name:hover p {
+    margin: 0;       
+}
+.container-fluid {
+ 
+  background: url('https://png.pngtree.com/thumb_back/fh260/background/20190630/pngtree-vector-white-background-with-abstract-geometric-pattern-or-textu-image_265390.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+        </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <!-- nav-bar -->
+                <nav class="navbar navbar-expand-lg navbar-light"  style="background-color:RGB(0, 0, 0);">
+                       
+                        <!-- <a class="navbar-brand" href="#"><b><i class="text-white">Myanlearn</i></b></a> -->
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                          <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                          <ul class="navbar-nav mr-auto">
+                            <li class="nav-item active">
+                              <a class="nav-link" href="homepage.html"><b class="text-white"><i class="fa fa-home"> </i> Home Page</b> <span class="sr-only">(current)</span></a>
+                            </li>
+                           <b><li class="nav-item dropdown">
+                              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                               <b class="text-white"><i class="fas fa-graduation-cap"></i> Courses</b> 
+                              </a>
+                              <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color:RGB(188, 143, 143);">
+                                <a class="dropdown-item" href="#">HTML</a>
+                                <a class="dropdown-item" href="#">CSS</a>
+                                <a class="dropdown-item" href="#">Javascript</a>
+                                <a class="dropdown-item" href="#">Bootstrap</a>
+                                <a class="dropdown-item" href="#">Python</a>
+                               
+                            </li>
+                            </b>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="about.html"><b class="text-white"><i class="far fa-address-card"></i> About</b> <span class="sr-only">(current)</span></a>
+                              </li>
+                              <li class="nav-item active">
+                                  <a class="nav-link" href="contact.html"><b class="text-white"><i class="fab fa-facebook-messenger"></i> Contact</b> <span class="sr-only">(current)</span></a>
+                                </li>
+                            
+                          </ul>
+                          <!-- useraccount -->
+                          <div class="navbar-nav ml-auto">
+                            
+                              <div class="nav-item dropdown">
+                                  <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"><b class="text-white"><i class="far fa-user"></i>  User Account</b></a>
+                                  <div class="dropdown-menu" style="background-color:RGB(188, 143, 143);">
+                                      <a href="login.html" class="dropdown-item"><b class="text-dark">Login</b></a>
+                                      <a href="register.html" class="dropdown-item"><b class="text-dark">Register</b></a>
+                                  </div>
+                              </div>
+                           
+                          </div>
+                             <!-- useraccount -->
+                        </div>
+                      </nav>
+        </div>
+    </div>
+     <!-- Bottom Bar -->
+        <div class="container-fluid " style="background-color:RGB(188, 143, 143);">
+            <div class="row align-items-center">
+                <div class="col-md-3 mt-3 mb-3">
+                  <div><i><h2>CODE THAKHIN</h2></i></div>
+                    <!-- <div class="logo text-dark">
+                            <img src="images\logo 1.png" alt="Logo" width="70" height="50" ><i>YANLAND</i>
+                    </div> -->
+                </div>
+
+                <div class="col-md-6 mt-3 mb-3 ml-3">
+                    <div class="input-group md-form form-sm form-2 pl-0">
+                        <input class="form-control my-0 py-1 amber-border" type="text" placeholder="What do you want to learn?" aria-label="Search">
+                        <div class="input-group-append">
+                          <span class="input-group-text amber lighten-3" id="basic-text1"><i class="fas fa-search text-grey"
+                              aria-hidden="true"></i></span>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+   
+    <!-- Bottom Bar End --> 
+
+    
+    <div class="container-fluid" style="background-color:RGB(102, 205, 170);">
+     
+    <div class="row">
+    <!-- <img src="images\image1.jpg" width="1400" height="425" alt="Responsive image" class="img-fiuid"> -->
+   
+     <!-- sidebar -->
+     <div class="col-md-3 mt-4" style="background-color:RGB(0, 0, 0);">
+        <nav class="navbar ml-2">
+            <div id="accordion">
+              <div class="mt-3 text-white mb-3">
+                <h5><i>You can learn the following language by Myanmar language.</i></h5>
+              </div>
+                <div class="card" style="background-color:RGB(188, 143, 143);">
+                   
+                  <div class="card-header" >
+                    
+                    <h5 class="mb-0">
+                        <span class="text-dark" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" >
+                          <b>HTML</b> 
+                        </span>
+                    </h5>
+                  </div>
+              
+                  <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div class="card-body">
+                      <a href=""><li class="text-dark"><b>1.1 Introduction</b></li></a>
+                     <a href=""><li class="text-dark"><b>1.2 HTML Heading</b></li></a> 
+                     <a href=""> <li class="text-dark"><b>1.3 HTML Body</b></li></a>
+                      <a href=""><li class="text-dark"><b>1.4 paragraph</b></li></a>
+                      <a href=""><li class="text-dark"><b>1.5 image</b></li></a>
+                    </div>
+                  </div>
+                </div>
+               
+                
+                
+                
+                <div class="card" style="background-color:RGB(188, 143, 143);">
+                  <div class="card-header" >
+                    <h5 class="mb-0">
+                        <span class="text-dark" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                       <b>CSS</b></span>
+                      
+                    </h5>
+                  </div>
+                  <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                    <div class="card-body">
+                        <a href=""><li class="text-dark"><b>1.1 Introduction</b></li></a>
+                        <a href=""><li class="text-dark"><b>1.2 HTML Heading</b></li></a> 
+                        <a href=""> <li class="text-dark"><b>1.3 HTML Body</b></li></a>
+                         <a href=""><li class="text-dark"><b>1.4 paragraph</b></li></a>
+                         <a href=""><li class="text-dark"><b>1.5 image</b></li></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="card" style="background-color:RGB(188, 143, 143);">
+                  <div class="card-header">
+                    <h5 class="mb-0">
+                        <span class="text-dark" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        <b>JavaScript</b>
+                        </span>
+                    </h5>
+                  </div>
+                  <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                    <div class="card-body">
+                        <a href=""><li class="text-dark"><b>1.1 Introduction</b></li></a>
+                        <a href=""><li class="text-dark"><b>1.2 HTML Heading</b></li></a> 
+                        <a href=""> <li class="text-dark"><b>1.3 HTML Body</b></li></a>
+                         <a href=""><li class="text-dark"><b>1.4 paragraph</b></li></a>
+                         <a href=""><li class="text-dark"><b>1.5 image</b></li></a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card" style="background-color:RGB(188, 143, 143);">
+                    <div class="card-header">
+                      <h5 class="mb-0">
+                          <span class="text-dark" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                          <b>Python</b>
+                          </span>
+                      </h5>
+                    </div>
+                    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                      <div class="card-body">
+                          <a href=""><li class="text-dark"><b>1.1 Introduction</b></li></a>
+                          <a href=""><li class="text-dark"><b>1.2 HTML Heading</b></li></a> 
+                          <a href=""> <li class="text-dark"><b>1.3 HTML Body</b></li></a>
+                           <a href=""><li class="text-dark"><b>1.4 paragraph</b></li></a>
+                           <a href=""><li class="text-dark"><b>1.5 image</b></li></a>
+                      </div>
+                    </div>
+                  </div>
+
+
+              </div>
+            </nav>
+    </div>
+     <!-- sidebar -->
+     <div class="col-md-9">
+       <div class="mr-3  mt-4 ml-2">
+        <!-- slideshow -->
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active"  data-interval="400">
+              <img class="d-block w-100" src="images\newslide1.jpg" alt="Responsive image" class="img-fiuid"  height="400">
+            </div>
+            
+            <div class="carousel-item"  data-interval="400">
+              <img class="d-block w-100" src="images\slide3.jpg" alt="Responsive image" class="img-fiuid"  height="400">
+            </div>
+            <div class="carousel-item"  data-interval="400">
+              <img class="d-block w-100" src="images\slide9.jpg" alt="Responsive image" class="img-fiuid"  height="400">
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+        <!-- slideshow -->
+        <h3 class="mt-3 ">Aims of creating this site</h3>
+        <p align="justify">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et, iste deleniti eveniet assumenda neque vero culpa perspiciatis officiis! Quaerat id mollitia nemo quia ratione, error alias laborum sunt necessitatibus ducimus!Lore Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et, iste deleniti eveniet assumenda neque vero culpa perspiciatis officiis! Quaerat id mollitia nemo quia ratione, error alias laborum sunt necessitatibus ducimus!Lore Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et, iste deleniti eveniet assumenda neque vero culpa perspiciatis officiis! Quaerat id mollitia nemo quia ratione, error alias laborum sunt necessitatibus ducimus!Lore Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et, iste deleniti eveniet assumenda neque vero culpa perspiciatis officiis! Quaerat id mollitia nemo quia ratione, error alias laborum sunt necessitatibus ducimus!Lore Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et, iste deleniti eveniet assumenda neque vero culpa perspiciatis officiis! Quaerat id mollitia nemo quia ratione, error alias laborum sunt necessitatibus ducimus!LoreLorem ipsum dolor sit, amet consectetur adipisicing elit. Et, iste deleniti eveniet assumenda neque vero culpa perspiciatis officiis! Quaerat id mollitia nemo quia ratione, error alias laborum sunt necessitatibus ducimus!Loreas laborum sunt necessitatibus ducimus!Lore Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et, iste deleniti eveniet assumenda neque vero culpa perspiciatis officiis! Quaerat id mollitia nemo quia ratione, error alias laborum sunt necessitatibus ducimus!LoreLorem ipsum dolor sit, amet consectetur adipisicing elit. Et, iste deleniti eveniet assumenda neque vero culpa perspiciatis officiis! Quaerat id mollitia nemo quia ratione, error alias laborum </p>
+      
+      </div>
+     </div>
+    <br>
+    <br>
+    <!-- Category Start-->
+<div class="category ml-3 mr-3">
+    <div class="container-fluid mt-5 ml-5 ">
+        <div class="row mr-5">
+            <div class="col-md-3">
+                <div class="category-item ch-400">
+                    <img src="images\html.png" / alt="Responsive image" >
+                    <a class="category-name" href="">
+                        <p><i>HTML</i></p>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="category-item ch-250">
+                    <img src="images\php.png" / alt="Responsive image" >
+                    <a class="category-name" href="">
+                        <p><i>PHP</i></p>
+                    </a>
+                </div>
+                <div class="category-item ch-150">
+                    <img src="images\image14.jpg" / alt="Responsive image" >
+                    <a class="category-name" href="">
+                        <p><i>WELCOME FROM OUR CLASS</i></p>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="category-item ch-150">
+                    <img src="images\image14.jpg" / alt="Responsive image" > 
+                    <a class="category-name" href="">
+                        <p><i>ELCOME FROM OUR CLASS</i></p>
+                    </a>
+                </div>
+                <div class="category-item ch-250">
+                    <img src="images\java.png" / alt="Responsive image" >
+                    <a class="category-name" href="">
+                        <p><i>JAVA</i></p>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="category-item ch-400 mr-3">
+                    <img src="images\css.png" / alt="Responsive image" >
+                    <a class="category-name" href="">
+                        <p><i>CSS</i></p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Category End--> 
+<!-- style="background-color:RGB(47, 79, 79);" -->
+
+    
+   <!-- Contat us -->
+   <div class="container-fluid mt-3" style="background-color:RGB(47, 79, 79);">
+   <div class="row mt-5" >
+     <div class="col-md-6">
+        <div class="ml-5 mb-5">
+       <h3 class="text-dark">Have Us Contact You By Filling <br> And Submitting The Form</h3><br>
+       <p align="justify" class="text-dark"><b>You are just a few steps away from a personalized offer. Just fill 
+       in the form and send it to us and we'll get right back with a call to help you.</b></p>
+       <ul class="text-dark">
+         <b><li>It's very easy just fill in the form so we can send</li></b>
+         <b><li>To send meaasage , we'll require some info </li></b>
+         <b><li>Don't hesitate to email us for any questions or inquiries</li></b>
+       </ul>  
+       </div>
+       
+      
+     </div>
+     <div class="col-md-6">
+       <form action="">
+        <div class="form-group mt-3 mr-5">
+           <label for="name" class="text-dark"><b>Name</b></label>
+           <input type="text" class="form-control" name="name" id="name" placeholder="Enter your name">
+        </div>
+
+        <div class="form-group mt-3 mr-5">
+            <label for="name"class="text-dark"><b>Email</b></label>
+            <input type="text" class="form-control" name="email" id="email" placeholder="Enter your email">
+         </div>
+
+         <div class="form-group mt-3 mr-5">
+            <label for="name" class="text-dark"><b>Message</b></label>
+            <textarea name="meaasge" class="form-control"  id="meaasge" rows="3" placeholder="Your Meaasge"></textarea>
+         </div>
+
+         <div class="form-group checkbox white">
+            <input type="checkbox" id="lterms" value="Agreed-to-Terms" name="lterms" required><i class="text-dark"><b> I agree Privacy Policy and Terms & Conditions </b></i>
+        </div>
+
+        <div class="form-group">
+            <button class="btn btn-success"> Submit</button>
+        </div>
+        </form>
+       
+    </div>
+   </div>
+  </div>
+<!--  Contat us -->
+      <div class="container-fluid">
+    <div class="row mt-3">
+      <!-- html -->
+        <div class="col-sm-6 col-md-4">
+            
+                <div class="ml-3 mr-3 mb-4">
+                  <img src="images\html.png" alt="Responsive image" class="img-fiuid" width="390" height="250">
+                  <h5 class="mt-2"><b>What is HTML?</b></h5>
+                  <p align="justify">
+                  <b> Hypertext Markup Language (HTML) is the standard markup language for documents designed to be displayed in a web browser. It can be assisted by technologies such as Cascading Style Sheets (CSS) and scripting languages such as JavaScript.Web browsers receive HTML documents from a web server or from local storage and render the documents into multimedia web pages. HTML describes the structure of a web page semantically and originally included cues for .......</b>
+                  </p>
+                 <a href=""><button class="btn btn-dark  btn-sm btn-block">Click continue to learn>>>></button></a>
+                </div>
+            
+        </div>
+        <!-- html -->
+
+        <!-- css -->
+        <div class="col-sm-6 col-md-4">
+            
+            <div class="ml-3 mr-3 mb-4">
+              <img src="images\css.png" alt="Responsive image" class="img-fiuid" width="390" height="250">
+              <h5 class="mt-2"><b>What is CSS?</b></h5>
+              <p align="justify">
+              <b> Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a document written in a markup language such as HTML.[1] CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.CSS is designed to enable the separation of presentation and content, including layout, colors, and fonts.This separation can improve content accessibility, provide more flexibility and control in the specification of presentation characteristics.........</b>
+              </p>
+             <a href=""><button class="btn btn-dark  btn-sm btn-block">Click continue to learn>>>></button></a>
+            </div>
+        
+    </div>
+    <!-- css --> 
+
+    <!-- js -->
+    <div class="col-sm-6 col-md-4">
+            
+        <div class="ml-3 mr-3 mb-4">
+          <img src="images\js.png" alt="Responsive image" class="img-fiuid" width="390" height="250">
+          <h5 class="mt-2"><b>What is JS?</b></h5>
+          <p align="justify">
+          <b> JavaScript often abbreviated as JS, is a programming language that conforms to the ECMAScript specification.[7] JavaScript is high-level, often just-in-time compiled, and multi-paradigm. It has curly-bracket syntax, dynamic typing, prototype-based object-orientation, and first-class functions.Alongside HTML and CSS, JavaScript is one of the core technologies of the World Wide Web.JavaScript enables interactive web pages and is an essential part of web applications. The vast  .........</b>
+          </p>
+         <a href=""><button class="btn btn-dark  btn-sm btn-block"><b></b>Click continue to learn>>>></b></button></a>
+        </div>
+    
+</div>
+<!-- js -->
+
+<!-- php -->
+<div class="col-sm-6 col-md-4">
+            
+    <div class="ml-3 mr-3 mb-4">
+      <img src="images\php.png" alt="Responsive image" class="img-fiuid" width="390" height="250">
+      <h5 class="mt-2"><b>What is PHP?</b></h5>
+      <p align="justify">
+      <b> Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate sunt non ullam temporibus dolores ducimus laborum deleniti vero deserunt placeat? Hic itaque deleniti mollitia doloremque, facilis eos veniam reprehenderit consequaturLorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate sunt non ullam temporibus dolores ducimus laborum deleniti vero deserunt placeat? Hic itaque deleniti mollitia doloremque, facilis eos veniam reprehenderit consequatur..........</b>
+      </p>
+     <a href=""><button class="btn btn-dark  btn-sm btn-block"><b></b>Click continue to learn>>>></b></button></a>
+    </div>
+
+</div>
+<!-- php --> 
+<!-- java -->
+<div class="col-sm-6 col-md-4">
+            
+    <div class="ml-3 mr-3 mb-4">
+      <img src="images\java.png" alt="Responsive image" class="img-fiuid" width="390" height="250">
+      <h5 class="mt-2"><b>What is JAVA?</b></h5>
+      <p align="justify">
+      <b> Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate sunt non ullam temporibus dolores ducimus laborum deleniti vero deserunt placeat? Hic itaque deleniti mollitia doloremque, facilis eos veniam reprehenderit consequaturLorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate sunt non ullam temporibus dolores ducimus laborum deleniti vero deserunt placeat? Hic itaque deleniti mollitia doloremque, facilis eos veniam reprehenderit consequatur..........</b>
+      </p>
+     <a href=""><button class="btn btn-dark  btn-sm btn-block"><b></b>Click continue to learn>>>></b></button></a>
+    </div>
+
+</div>
+<!-- java -->
+<!-- c++ -->
+<div class="col-sm-6 col-md-4">
+            
+    <div class="ml-3 mr-3 mb-4">
+      <img src="images\C++.png" alt="Responsive image" class="img-fiuid" width="390" height="250">
+      <h5 class="mt-2"><b>What is C++?</b></h5>
+      <p align="justify">
+      <b> Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate sunt non ullam temporibus dolores ducimus laborum deleniti vero deserunt placeat? Hic itaque deleniti mollitia doloremque, facilis eos veniam reprehenderit consequaturLorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate sunt non ullam temporibus dolores ducimus laborum deleniti vero deserunt placeat? Hic itaque deleniti mollitia doloremque, facilis eos veniam reprehenderit consequatur..........</b>
+      </p>
+     <a href=""><button class="btn btn-dark  btn-sm btn-block"><b></b>Click continue to learn>>>></b></button></a>
+    </div>
+
+</div>
+<!-- c++ -->
+       
+    </div>
+    </div>
+  </div>
+    
+     <!-- Team -->
+     
+    <div class="container-fluid mt-5 mb-5" style="background-color:RGB(188, 143, 143);"><!-- container -->
+      
+      <div class="row">
+        <div class="col-md-12">
+          <div align="center">
+            <h2>Our Team Of Consultants</h2>
+            <p class="p-heading">We're only as strong and as knowledgeable as our team. So here are the men and women which help customers meet goals and grow companies</p>
+          </div>
+        </div>
+
+      </div>
+       <!-- Team Member -->
+       
+      <div class="row">
+          <div class="col-md-3">
+            <div class="card mb-5" style="width: 18rem;">
+                <img class="card-img-top" src="images\developer1.jpg"  width="300" height="300" alt="Responsive image" class="img-fiuid">
+                <div class="card-body" style="background-color:RGB(0, 0, 0);">
+                  <p class="card-text">
+                    <h4 class="text-white">John Whitelong</h4>
+                      <h4 class="text-white">(Backend Developer)</h4>
+                      <div class="row">
+                        <a href=""> <button class="btn btn-sm  mt-3 ml-3" style="background-color:RGB(188, 143, 143);"><i class="fab fa-facebook"></i> facebook</button></a>
+                        <a href=""> <button class="btn btn-sm  mt-3 ml-4" style="background-color:RGB(188, 143, 143);"><i class="fab fa-twitter"></i> twitter</button></a>
+                      </div>
+                      
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="images\developer2.jpg"  width="300" height="300" alt="Responsive image" class="img-fiuid">
+                    <div class="card-body" style="background-color:RGB(0, 0, 0);">
+                      <p class="card-text">
+                        <h4 class="text-white">Chris Zimerman</h4>
+                          <h4 class="text-white">(Android Developer)</h4>
+                          <div class="row">
+                            <a href=""> <button class="btn btn-sm  mt-3 ml-3" style="background-color:RGB(188, 143, 143);"><i class="fab fa-facebook"></i> facebook</button></a>
+                            <a href=""> <button class="btn btn-sm  mt-3 ml-4" style="background-color:RGB(188, 143, 143);"><i class="fab fa-twitter"></i> twitter</button></a>
+                          </div>
+                          
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="col-md-3">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="images\developer4.jpg"  width="300" height="300" alt="Responsive image" class="img-fiuid">
+                        <div class="card-body" style="background-color:RGB(0, 0, 0);">
+                          <p class="card-text" >
+                            <h4 class="text-white">Mary Villalonga</h4>
+                              <h4 class="text-white">(Frontend Developer)</h4>
+                              <div class="row">
+                                <a href=""> <button class="btn btn-sm  mt-3 ml-3" style="background-color:RGB(188, 143, 143);"><i class="fab fa-facebook"></i> facebook</button></a>
+                                <a href=""> <button class="btn btn-sm  mt-3 ml-4" style="background-color:RGB(188, 143, 143);"><i class="fab fa-twitter"></i> twitter</button></a>
+                              </div>
+                              
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top" src="images\developer3.jpg"  width="300" height="300" alt="Responsive image" class="img-fiuid">
+                            <div class="card-body" style="background-color:RGB(0, 0, 0);">
+                              <p class="card-text">
+                                <h4 class="text-white">John Whitelong</h4>
+                                  <h4 class="text-white">Business Developer</h4>
+                                  <div class="row">
+                                    <a href=""> <button class="btn btn-sm  mt-3 ml-3" style="background-color:RGB(188, 143, 143);"><i class="fab fa-facebook"></i> facebook</button></a>
+                                    <a href=""> <button class="btn btn-sm  mt-3 ml-4" style="background-color:RGB(188, 143, 143);"><i class="fab fa-twitter"></i> twitter</button></a>
+                                  </div>
+                                  
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+      </div>
+    
+      <!--  team-member -->
+      
+     
+    </div> <!--  container -->
+     
+
+    <!-- team -->
+
+    <!-- footer  -->
+
+ <footer class="ftco-footer ftco-bg-white ftco-section mt-15">
+    
+      <div class="row mt-3" style="background-color:RGB(0, 0, 0);">
+        <div class="col-md-3 mt-3">
+          <div class="ftco-footer-widget mb-4">
+            <h2 class="text-white">About</h2>
+            <p align="justify"><i class="text-white"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae sequi, architecto laborum excepturi molestiae dolore? Beatae distinctio.Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae sequi, architecto laborum excepturi molestiae dolore? Beatae distinctio.</i></p>
+          </div>
+        </div>
+        <div class="col-md-3 mt-3">
+          <div class="ftco-footer-widget mb-4">
+            <h3 class="text-white">Mobile App</h3>
+            <ul class="list-unstyled">
+              <li>
+               
+                <a href="" >
+                    
+                  <!-- <p> <i class="fab fa-google-play"></i> Download on <br>the Google Play</p> -->
+                  <button class="btn btn-info mt-2 btn-sm"><i class="fab fa-google-play"></i> Download on <br>the Google Play</button>
+                </a>
+              </li>
+              
+              
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-3 mt-3">
+          <div class="ftco-footer-widget mb-4 ml-md-4">
+            <h3 class="text-white">FOLLOW US</h3>
+            <ul class="list-unstyled">
+              <li><a href="">
+                <i class="fab fa-facebook-square"></i>  Facebook
+              </a>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li><br>
+              <li><a href="" target="_blank">
+                <i class="fab fa-instagram-square"></i>  Instagram
+              </a>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li><br>
+              
+              <li><a href="" target="_blank">
+                <i class="fab fa-linkedin"></i>  Linkedin
+              </a>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li> <br>
+              <li><a href="">
+                <i class="fab fa-twitter-square"></i>  Twitter
+              </a></li>
+              
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-3 mt-3">
+          <div class="ftco-footer-widget mb-4">
+            <h2 class="text-white">CONTACT INFO</h2>
+            <span> <h class="text-white"> <i class="fas fa-mobile-alt"></i> 090948765674 </h></span><br><br>
+            <span> <h  class="text-white"> <i class="far fa-envelope"></i> info@codethakhin.com </h></span>
+            <div class="block-23 mb-3">
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 text-center" 
+        style="background-color:RGB(0, 0, 0);">
+          
+            <p class="text-white">THANKS FOR VISITING</p>
+            <p  class="text-white">By CodethakhinTeam</p>
+        </div>
+      </div>
+  </footer>
+    </div>
+    
+</div>
+<script>
+   $(".animated").addClass("delay-1s");
+</script>
+
+ 
+    <!-- jQuery and JS bundle w/ Popper.js -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    
+</body>
+</html>
